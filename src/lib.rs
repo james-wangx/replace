@@ -18,13 +18,13 @@ pub struct Args {
 impl Args {
     pub fn replace(&self, target: &str) -> Result<(), Box<dyn Error>> {
         let md = fs::metadata(target)?;
-        
+
         if md.is_file() {
             let contents = fs::read_to_string(target)?;
             let results = contents.replace(&self.string, &self.switch);
             fs::write(target, results)?;
             println!("Replaced in file {}", target);
-            return  Ok(());
+            return Ok(());
         } else {
             for entry in fs::read_dir(target)? {
                 let path = entry?.path();
