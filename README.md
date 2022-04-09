@@ -1,5 +1,10 @@
 # replace
+![](https://img.shields.io/github/license/james-wangx/replace)
+![](https://img.shields.io/github/workflow/status/james-wangx/replace/Rust)
+![](https://img.shields.io/github/languages/code-size/james-wangx/replace)
+
 Replace a string in file or directory
+
 
 ## Usage
 ```bash
